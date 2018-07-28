@@ -74,12 +74,12 @@ class XClient: dinuWindow.Window {
 		show;
 		grabKeyboard;
 		padding = 0.4.em;
-		lastUpdate = Clock.currSystemTick.msecs;
+		lastUpdate = TickDuration.currSystemTick.msecs;
 		windowAnimation = new AnimationExpIn(pos.y, 0, (0.1+size.h/4000.0)*options.animations);
 	}
 
 	void update(){
-		auto cur = Clock.currSystemTick.msecs;
+		auto cur = TickDuration.currSystemTick.msecs;
 		auto delta = cur-lastUpdate;
 		lastUpdate = cur;
 		int targetY = cast(int)windowAnimation.calculate;
