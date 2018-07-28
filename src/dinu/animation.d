@@ -15,7 +15,7 @@ class Animation {
 	this(double start, double end, double duration){
 		this.start = start;
 		this.end = end;
-		this.timeStart = Clock.currSystemTick.msecs/1000.0;
+		this.timeStart = TickDuration.currSystemTick.msecs/1000.0;
 		this.duration = duration;
 	}
 	abstract double func(double completion);
@@ -27,7 +27,7 @@ class Animation {
 		return timeStart+duration < timeCurrent;
 	}
 	double timeCurrent(){
-		return Clock.currSystemTick.msecs/1000.0;
+		return TickDuration.currSystemTick.msecs/1000.0;
 	}
 }
 
