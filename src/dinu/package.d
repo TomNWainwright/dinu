@@ -18,6 +18,8 @@ public import
 	undead.stream,
 	std.math,
 	std.datetime,
+	core.time,
+
 
 	x11.X,
 	x11.Xlib,
