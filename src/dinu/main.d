@@ -98,7 +98,7 @@ void windowLoop(){
 	scope(exit)
 		close();
 
-	long last = Clock.currSystemTick.msecs;
+	long last = TickDuration.currSystemTick.msecs;
 	while(windowMain.active){
 		windowMain.handleEvents;
 		windowMain.draw;
@@ -108,7 +108,7 @@ void windowLoop(){
 			windowResults.update(windowMain);
 			windowResults.draw;
 		}
-		auto curr = Clock.currSystemTick.msecs;
+		auto curr = TickDuration.currSystemTick.msecs;
 		last = curr;
 		Thread.sleep((15 - max(0, min(15, curr-last))).msecs);
 	}
