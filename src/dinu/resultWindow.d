@@ -49,7 +49,7 @@ class ResultWindow: dinuWindow.Window {
 		if(pos != [targetX, windowMain.size.y+windowMain.pos.y])
 			move([targetX, windowMain.size.y+windowMain.pos.y]);
 
-		auto cur = Clock.currSystemTick.msecs;
+		auto cur = TickDuration.currSystemTick.msecs;
 		auto delta = cur - lastUpdate;
 		lastUpdate = cur;
 
